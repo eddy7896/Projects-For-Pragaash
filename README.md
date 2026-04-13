@@ -101,17 +101,9 @@ Mentors are expected to elevate the student projects to meet these standards:
 
 ---
 
-## 🤝 Collaboration & Support
-
-- **Pi Jam Mentors Group:** Check the assigned communication channel.
-- **Technical Lead:** Reach out for architectural guidance.
-- **Program Coordinator:** For event-related queries.
-
----
-
 <div align="center">
   <br>
   <i>"Nurturing Problem Solvers and Creators of Tommorow"</i>
   <br>
-  <b>Pi Jam Foundation 🏺</b>
+  <b>Pi Jam Foundation</b>
 </div>
