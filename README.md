@@ -1,101 +1,119 @@
-# 🌟 Pragaash: J&K State Innovation Showcase
+# 🌟 Pragaash: UT-Level State Innovation Showcase
+## Jammu & Kashmir Ecosystem Strengthening Initiative
 
-![Pragaash Banner](https://img.shields.io/badge/Pragaash-2024-blueviolet?style=for-the-badge&logo=rocket)
+![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![Event](https://img.shields.io/badge/Event-Pragaash%202024-blueviolet?style=for-the-badge)
 ![Organization](https://img.shields.io/badge/Organized%20By-Pi%20Jam%20Foundation-orange?style=for-the-badge)
-![Region](https://img.shields.io/badge/Region-Jammu%20%26%20Kashmir-green?style=for-the-badge)
-
-Welcome to the official mentoring codebase for **Pragaash**, a UT-level State Innovation Showcase for Jammu & Kashmir. This initiative, organized by the **Pi Jam Foundation**, serves as the culmination for the innovative projects submitted by students during the **Chillai Kalan Hackathon**.
+![Partners](https://img.shields.io/badge/Partners-Samagra%20Shiksha%20%7C%20NIT%20Srinagar-blue?style=for-the-badge)
 
 ---
 
-## 🚀 Purpose
+## 📖 Overview
 
-This repository is the central hub for projects being developed and refined by mentors. Each project represents a spark of innovation from the youth of J&K, now being professionally structured and enhanced for the final showcase.
+**Pragaash** (meaning *Light* or *Illumination* in Kashmiri) is a premier UT-level Innovation Showcase organized by the **Pi Jam Foundation**. This initiative serves as a platform to celebrate and scale student-led innovations from various districts across the Kashmir Valley.
 
-## 📂 Repository Structure
+This repository is dedicated to the **Chillai Kalan Hackathon** projects. During the 40-day period of "Chillai Kalan"—the harshest phase of winter in Kashmir—students developed innovative solutions to local problems. This codebase serves as the central hub where mentors refine these "prototypes" into professional-grade, showcase-ready innovations.
 
-To maintain a clean and scalable environment, we follow a strict directory-per-project convention:
+---
+
+## 🎯 Our Mission
+
+The Pi Jam Foundation aims to provide students with the digital skills and computational thinking needed to solve real-world problems. Through Pragaash, we aim to:
+- **Strengthen the Ecosystem:** Bridging the gap between school-level innovation and professional development.
+- **Empower Students:** Turning student ideas from the Chillai Kalan Hackathon into scalable solutions.
+- **Promote Local Innovation:** Solving challenges specific to the Jammu & Kashmir region (Flood prediction, agriculture, winter safety, etc.).
+
+---
+
+## 📂 Repository Architecture
+
+We maintain a "Monorepo-lite" structure where each student project is managed as an independent module.
 
 ```text
 root/
-├── project-name-alpha/
-│   ├── src/
-│   ├── docs/
-│   └── README.md
-├── project-name-beta/
-│   ├── ...
-└── .gitignore
+├── [project-category]/
+│   ├── [project-slug]/
+│   │   ├── src/                # Core logic & source code
+│   │   ├── assets/             # Images, diagrams, hardware schematics
+│   │   ├── docs/               # Technical specs & user manuals
+│   │   ├── README.md           # Project-specific documentation
+│   │   └── requirements.txt    # OR package.json / pubspec.yaml
+├── .gitignore                  # Global ignore rules
+└── README.md                   # This document
 ```
 
-> [!IMPORTANT]
-> **Every project must reside in its own sub-folder.** Do not place files directly in the root directory except for repository-wide configuration files (like `.gitignore`, `README.md`).
+### Common Categories
+- `environmental-tech`: Flood alerts, water conservation, etc.
+- `agri-tech`: Smart irrigation, vertical farming.
+- `safety-health`: Winter navigation, health monitoring.
+- `education`: Interactive learning tools.
 
 ---
 
-## 🛠 Mentor Workflow
+## 🛠 Mentor Contribution Workflow
 
-To ensure seamless collaboration and version control, mentors are assigned individual branches. Follow these steps to contribute:
+To maintain the integrity of the `main` branch, all mentors must follow this rigorous Git flow:
 
-### 1. Standard Setup
-Before starting, ensure you have cloned the repository and are on the `main` branch.
-
+### 1. Synchronization
+Always start by ensuring your local environment matches the latest stable release.
 ```bash
 git checkout main
 git pull origin main
 ```
 
-### 2. Prepare Your Project
-Create your designated project folder in your local workplace.
+### 2. Branch Assignment
+Every mentor is assigned a dedicated branch.
+- **Naming Convention:** `mentor/[your-name]` or `feature/[project-id]`
+- **Create your branch (first time only):**
+  ```bash
+  git checkout -b mentor/john-doe
+  ```
+- **Switching to branch:**
+  ```bash
+  git checkout mentor/john-doe
+  ```
 
+### 3. Project Initialization
+When starting a new project assigned to you:
+1. Create a sub-folder using kebab-case: `mkdir [project-category]/smart-flood-alert`.
+2. Initialize the project inside that folder.
+3. **DO NOT** add files to the root directory.
+
+### 4. The "Update & Push" Cycle
 ```bash
-mkdir project-name
-cd project-name
-# Initialize your project files here
+git add .
+git commit -m "feat([project-slug]): detailed description of changes"
+git push origin mentor/[your-name]
 ```
 
-### 3. Contribution Cycle
-Each mentor works on a specific branch assigned to them (e.g., `mentor/your-name` or `feature/project-id`).
+---
 
-1. **Switch to your branch:**
-   ```bash
-   git checkout your-assigned-branch
-   ```
-2. **Sync with Main** (Optional but recommended):
-   ```bash
-   git merge main
-   ```
-3. **Commit your changes:**
-   ```bash
-   git add project-name/
-   git commit -m "feat: initial commit for [Project Name]"
-   ```
-4. **Push to your branch:**
-   ```bash
-   git push origin your-assigned-branch
-   ```
+## 💎 Technical Standards
+
+Mentors are expected to elevate the student projects to meet these standards:
+
+- **Modularity:** Code should be divided into logical components/modules.
+- **Documentation:** Every project must have its own `README.md` inside its folder.
+- **Clean Code:** Use meaningful variable names and follow language-specific style guides (PEP8 for Python, Airbnb for JS).
+- **Version Control:** Commit messages should follow [Conventional Commits](https://www.conventionalcommits.org/).
+
+> [!WARNING]
+> **Credential Safety:** Never commit API keys, environment variables, or private sensitive data. Use `.env` files and ensure they are ignored.
 
 ---
 
-## 📜 Guidelines for Mentors
+## 🤝 Collaboration & Support
 
-- **Consistent Naming:** Use kebab-case for folder names (e.g., `smart-irrigation-system`).
-- **Documentation:** Every project folder should include its own `README.md` explaining the project's goal, tech stack, and how to run it.
-- **Clean Code:** Ensure you follow the best practices for the respective programming language/framework used.
-- **Regular Updates:** Push your progress frequently to your assigned branch to avoid large, conflicting merges later.
-
----
-
-## 🤝 Support & Collaboration
-
-If you encounter any issues with the repository structure or git workflow:
-
-- **Organizer:** Pi Jam Foundation
-- **Channel:** [Insert Discord/Slack/WhatsApp Link Here]
-- **Contact:** [Insert Coordinator Contact Info]
+- **Pi Jam Mentors Group:** Check the assigned communication channel.
+- **Technical Lead:** Reach out for architectural guidance.
+- **Program Coordinator:** For event-related queries.
 
 ---
 
-<p align="center">
-  <i>Empowering the next generation of innovators in Jammu & Kashmir.</i><br>
+<div align="center">
+  <img src="https://img.shields.io/badge/Made%20With%20%E2%9D%A4%EF%B8%8F%20In-Kashmir-green?style=for-the-badge" alt="Made in Kashmir">
+  <br>
+  <i>"Illuminating minds, solving for the future."</i>
+  <br>
   <b>Pi Jam Foundation 🏺</b>
-</p>
+</div>
