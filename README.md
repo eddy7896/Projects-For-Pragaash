@@ -1,4 +1,11 @@
 # 🌟 Pragaash: UT-Level State Innovation Showcase
+## Jammu & Kashmir Ecosystem Strengthening Initiative
+
+![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![Event](https://img.shields.io/badge/Event-Pragaash%202026-blueviolet?style=for-the-badge)
+![Organization](https://img.shields.io/badge/Organized%20By-Pi%20Jam%20Foundation-orange?style=for-the-badge)
+
+---
 
 ## 📖 Overview
 
@@ -94,9 +101,17 @@ Mentors are expected to elevate the student projects to meet these standards:
 
 ---
 
+## 🤝 Collaboration & Support
+
+- **Pi Jam Mentors Group:** Check the assigned communication channel.
+- **Technical Lead:** Reach out for architectural guidance.
+- **Program Coordinator:** For event-related queries.
+
+---
+
 <div align="center">
   <br>
-  <i>"Nurturing Creators of Tomorrow"</i>
+  <i>"Nurturing Problem Solvers and Creators of Tommorow"</i>
   <br>
-  <b>Pi Jam Foundation</b>
+  <b>Pi Jam Foundation 🏺</b>
 </div>
